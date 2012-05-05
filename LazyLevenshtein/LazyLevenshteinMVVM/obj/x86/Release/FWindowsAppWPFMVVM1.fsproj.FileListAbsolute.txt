@@ -1,0 +1,26 @@
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\FWindowsAppWPFMVVM1\bin\Release\App.XML
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\FWindowsAppWPFMVVM1\bin\Release\App.exe
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\FWindowsAppWPFMVVM1\bin\Release\App.pdb
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\FWindowsAppWPFMVVM1\bin\Release\FSharp.Core.dll
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\FWindowsAppWPFMVVM1\bin\Release\FSharp.Core.xml
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\FWindowsAppWPFMVVM1\bin\Release\de\FSharp.Core.resources.dll
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\FWindowsAppWPFMVVM1\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\FWindowsAppWPFMVVM1\obj\x86\Release\App.g.resources
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\FWindowsAppWPFMVVM1\obj\x86\Release\App.exe
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\FWindowsAppWPFMVVM1\obj\x86\Release\App.pdb
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\FWindowsAppWPFMVVM1\bin\Release\LazyLevenshtein.dll
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\FWindowsAppWPFMVVM1\bin\Release\LazyLevenshtein.pdb
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\FWindowsAppWPFMVVM1\bin\Release\LazyLevenshtein.xml
+C:\Users\blame\Desktop\LazyLev\FWindowsAppWPFMVVM1\bin\Release\App.XML
+C:\Users\blame\Desktop\LazyLev\FWindowsAppWPFMVVM1\bin\Release\App.exe
+C:\Users\blame\Desktop\LazyLev\FWindowsAppWPFMVVM1\bin\Release\App.pdb
+C:\Users\blame\Desktop\LazyLev\FWindowsAppWPFMVVM1\bin\Release\FSharp.Core.dll
+C:\Users\blame\Desktop\LazyLev\FWindowsAppWPFMVVM1\bin\Release\LazyLevenshtein.dll
+C:\Users\blame\Desktop\LazyLev\FWindowsAppWPFMVVM1\bin\Release\LazyLevenshtein.pdb
+C:\Users\blame\Desktop\LazyLev\FWindowsAppWPFMVVM1\bin\Release\LazyLevenshtein.xml
+C:\Users\blame\Desktop\LazyLev\FWindowsAppWPFMVVM1\bin\Release\FSharp.Core.xml
+C:\Users\blame\Desktop\LazyLev\FWindowsAppWPFMVVM1\bin\Release\de\FSharp.Core.resources.dll
+C:\Users\blame\Desktop\LazyLev\FWindowsAppWPFMVVM1\obj\x86\Release\FWindowsAppWPFMVVM1.fsprojResolveAssemblyReference.cache
+C:\Users\blame\Desktop\LazyLev\FWindowsAppWPFMVVM1\obj\x86\Release\App.g.resources
+C:\Users\blame\Desktop\LazyLev\FWindowsAppWPFMVVM1\obj\x86\Release\App.exe
+C:\Users\blame\Desktop\LazyLev\FWindowsAppWPFMVVM1\obj\x86\Release\App.pdb

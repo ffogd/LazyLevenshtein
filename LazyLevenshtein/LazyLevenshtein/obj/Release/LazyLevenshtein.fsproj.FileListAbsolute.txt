@@ -1,0 +1,21 @@
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\LazyLevenshtein\bin\Release\LazyLevenshtein.XML
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\LazyLevenshtein\bin\Release\LazyLevenshtein.dll
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\LazyLevenshtein\bin\Release\LazyLevenshtein.pdb
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\LazyLevenshtein\obj\Release\ResolveAssemblyReference.cache
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\LazyLevenshtein\obj\Release\LazyLevenshtein.dll
+C:\Users\dgoff\Documents\Visual Studio 2010\Projects\LazyLev\LazyLevenshtein\obj\Release\LazyLevenshtein.pdb
+C:\Users\blame\Desktop\LazyLev\LazyLevenshtein\bin\Release\LazyLevenshtein.XML
+C:\Users\blame\Desktop\LazyLev\LazyLevenshtein\bin\Release\LazyLevenshtein.dll
+C:\Users\blame\Desktop\LazyLev\LazyLevenshtein\bin\Release\LazyLevenshtein.pdb
+C:\Users\blame\Desktop\LazyLev\LazyLevenshtein\obj\Release\LazyLevenshtein.dll
+C:\Users\blame\Desktop\LazyLev\LazyLevenshtein\obj\Release\LazyLevenshtein.pdb
+C:\Users\blame\LazyLevenshtein\LazyLevenshtein\bin\Release\LazyLevenshtein.XML
+C:\Users\blame\LazyLevenshtein\LazyLevenshtein\bin\Release\LazyLevenshtein.dll
+C:\Users\blame\LazyLevenshtein\LazyLevenshtein\bin\Release\LazyLevenshtein.pdb
+C:\Users\blame\LazyLevenshtein\LazyLevenshtein\obj\Release\LazyLevenshtein.dll
+C:\Users\blame\LazyLevenshtein\LazyLevenshtein\obj\Release\LazyLevenshtein.pdb
+C:\Users\blame\LazyLevenshtein\LazyLevenshtein\LazyLevenshtein\bin\Release\LazyLevenshtein.XML
+C:\Users\blame\LazyLevenshtein\LazyLevenshtein\LazyLevenshtein\bin\Release\LazyLevenshtein.dll
+C:\Users\blame\LazyLevenshtein\LazyLevenshtein\LazyLevenshtein\bin\Release\LazyLevenshtein.pdb
+C:\Users\blame\LazyLevenshtein\LazyLevenshtein\LazyLevenshtein\obj\Release\LazyLevenshtein.dll
+C:\Users\blame\LazyLevenshtein\LazyLevenshtein\LazyLevenshtein\obj\Release\LazyLevenshtein.pdb

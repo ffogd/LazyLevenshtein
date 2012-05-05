@@ -1,0 +1,148 @@
+﻿<UserControl 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ViewModel="clr-namespace:LazyLevenshteinMVVM.ViewModel;assembly=App"
+	HorizontalAlignment ="Stretch"
+	HorizontalContentAlignment ="Stretch"
+	VerticalAlignment ="Stretch"
+	VerticalContentAlignment ="Stretch"
+	Foreground="White">
+    <UserControl.DataContext>
+        <ViewModel:InnerGrid> </ViewModel:InnerGrid>
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <Storyboard x:Key="selectedStory">
+            <DoubleAnimation Storyboard.TargetName="TextBlock"
+                                  Storyboard.TargetProperty="Opacity"
+                                  From="0"
+                                  To="0.8"
+                                  Duration="0:0:0.8"/>
+        </Storyboard>
+        <LinearGradientBrush x:Key="BoardBackground" StartPoint="0,0" EndPoint="1,0">
+            <GradientStop Offset="0" Color="LightSteelBlue"/>
+            <GradientStop Offset="1" Color="Gray"/>
+        </LinearGradientBrush>
+        <DataTemplate x:Key ="CellTemplate" >
+                <Border x:Name ="Border" BorderBrush ="DimGray" BorderThickness ="1">
+                    <Border.Background>
+                        <LinearGradientBrush Opacity ="0.2" StartPoint ="0,0" EndPoint ="0,1">
+                            <GradientStop Color ="DimGray" Offset ="0"/>
+                            <GradientStop Color ="White" Offset ="0.5"/>
+                            <GradientStop Color ="DimGray" Offset ="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                <StackPanel Orientation="Vertical" >
+                    <TextBlock x:Name="evaluateText" Text="{Binding Path=EvaluateText}"/>
+                    <TextBox x:Name ="TextBlock" Margin="3"
+                     FontWeight ="Bold" FontSize ="12"  Text ="{Binding Path=CellValue}" HorizontalAlignment ="{Binding ElementName=Border, Path=HorizontalAlignment}" VerticalAlignment ="Center"
+                             Focusable ="False" Opacity="0.8" Background="White">
+                        <TextBox.BitmapEffect>
+                            <DropShadowBitmapEffect/>
+                        </TextBox.BitmapEffect>
+                    </TextBox>
+                    <TextBlock x:Name="evaluateFrom" Text="{Binding Path=EvaluatedFrom}" FontSize="11" />
+                </StackPanel>
+            </Border>             
+            <DataTemplate.Triggers>        
+                <DataTrigger Binding ="{Binding IsEvaluated}" Value ="True">
+                    <Setter TargetName ="TextBlock" Property ="Foreground" Value="Red"/>
+                    <Setter TargetName ="TextBlock" Property ="Background" Value="Blue"/>
+                    <DataTrigger.EnterActions>
+                        <BeginStoryboard Storyboard="{StaticResource selectedStory}">
+                        </BeginStoryboard>
+                        <BeginStoryboard x:Name="evaluatedStory">
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="TextBlock"
+                                  Storyboard.TargetProperty="FontSize"
+                                  From="12"
+                                  To="22"
+                                  Duration="0:0:0.8" AutoReverse="True" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+                </DataTrigger>
+                
+                <DataTrigger Binding ="{Binding IsThunk}" Value ="True">
+                    <Setter TargetName ="TextBlock" Property ="Background" Value="LightGreen"/>
+                </DataTrigger>
+                
+                <DataTrigger Binding="{Binding IsEvaluatedFrom}" Value="True">
+                    <DataTrigger.EnterActions>
+                        <BeginStoryboard x:Name="evaluatedFromStory">
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="TextBlock"
+                                  Storyboard.TargetProperty="FontSize"
+                                  From="22"
+                                  To="12"
+                                  Duration="0:0:0.8"  />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+                    <DataTrigger.ExitActions>
+                        <ResumeStoryboard BeginStoryboardName="evaluatedFromStory" />
+                    </DataTrigger.ExitActions>
+                </DataTrigger>
+                
+                <DataTrigger Binding="{Binding IsEvaluate}" Value="True">
+                    <DataTrigger.EnterActions>
+                        <BeginStoryboard x:Name="activeStoryboard">
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="evaluateText"
+                                  Storyboard.TargetProperty="FontSize"
+                                  From="11"
+                                  To="20"
+                                  Duration="0:0:0.8" AutoReverse="True" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                        <BeginStoryboard Storyboard="{StaticResource selectedStory}">
+                            
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+                    <DataTrigger.ExitActions>                        
+                        <ResumeStoryboard BeginStoryboardName="activeStoryboard" />
+                    </DataTrigger.ExitActions>
+                </DataTrigger>
+                
+                <DataTrigger Binding="{Binding IsDiagStep}" Value="True">
+                    <DataTrigger.EnterActions>
+                        <BeginStoryboard Storyboard="{StaticResource selectedStory}" >
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+        <DataTemplate x:Key ="InnerGridRowTemplate">
+            <ItemsControl ItemTemplate ="{StaticResource CellTemplate}" ItemsSource ="{Binding}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Rows ="1"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </DataTemplate>        
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <ItemsControl Grid.Column="0" ItemTemplate ="{StaticResource InnerGridRowTemplate}" ItemsSource ="{Binding Path=GridRows}" x:Name ="MainList">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns ="1" Background="{StaticResource BoardBackground}"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+        <StackPanel Grid.Column="1" Orientation="Vertical" Margin="5">
+            <Label Content="Text 1" />
+            <TextBox MinWidth="10" MaxHeight="25" MaxLength="12" MaxWidth="200" Text="{Binding Path=TextValX,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <Label Content="Text 2" />
+            <TextBox MinWidth="10" MaxHeight="25" MaxLength="12" MaxWidth="200" Text="{Binding Path=TextValY,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <Label  Content="N - North" />
+            <Label Content="W - West" />
+            <Label Content="NW - North West" />
+            <Label Content="Distance"  Margin="5" />
+            <TextBox  Margin="5" Text="{Binding Path=Distance}" />
+        </StackPanel>
+    </Grid>
+</UserControl>
